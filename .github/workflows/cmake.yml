@@ -29,6 +29,6 @@ jobs:
       
     - uses: actions/upload-artifact@v3
       with:
-        name: Nsight-System profiling result 42
+        name: Nsight-System profiling result
         path: ${{github.workspace}}/build/*.nsys-rep
               
