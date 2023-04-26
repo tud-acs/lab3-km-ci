@@ -23,10 +23,6 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -j 8
 
-    - name: generate benchmark data
-      working-directory: ${{github.workspace}}/build
-      run: ./krazymeans -b
-
     - name: Nsight-System profile
       working-directory: ${{github.workspace}}/build
       run: nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
