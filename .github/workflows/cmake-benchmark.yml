@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     runs-on:
-      labels: development
+      labels: benchmark
     timeout-minutes: 15
 
     steps:
