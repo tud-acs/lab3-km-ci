@@ -2,7 +2,7 @@ name: CMake-benchmark
 
 on:
   push:
-    branches: [ "benchmark" ]
+    branches: [ "benchmark-gpu1" ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, 
@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     runs-on:
-      labels: benchmark
+      labels: benchmark-gpu1
     timeout-minutes: 15
 
     steps:
