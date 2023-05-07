@@ -59,6 +59,10 @@ cannot change it to another variant of K-means. The distance scaling functionali
 MUST be included in your implementation. If you are unsure if some algorithmic
 change is allowed, ask the lab instructors - this is _your_ responsibility. 
 
+## Two types of GPU in GitHub Runners.
+
+This year, we provide two types of GPUs. You need to specify which GPU to use by pushing your code to branch `benchmark-gpu0` or `benchmark-gpu1`.
+
 ## What data set should I use for testing/debugging?
 
 The code contains some functions to generate an example data set which can be 

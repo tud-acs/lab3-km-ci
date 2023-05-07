@@ -23,6 +23,9 @@ jobs:
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -j 8
 
+    - name: Print GPU model
+      run: nvidia-smi --query-gpu=gpu_name --format=csv
+      
     - name: Nsight-System profile
       working-directory: ${{github.workspace}}/build
       run: nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
