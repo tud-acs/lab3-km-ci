@@ -46,7 +46,7 @@ just to be sure.
 You should read the baseline source code and figure out how to program works.
 
 Then, you must:
- 
+
 * Improve the throughput of the project using **any of the techniques learned in
   the course** as much as possible.
   * You MUST use OpenCL or CUDA for the major run-time components.
@@ -98,7 +98,7 @@ The figure of merit will be the run-time when running the improved program with 
 
 ... where `benchmark.kmd` was generated using the `-b` option.
 
-## Can I share some of my knowledge with people outside my group?
+<!-- ## Can I share some of my knowledge with people outside my group?
 
 There are some bonus points awarded to the groups with the fastest implementation.
 
@@ -107,7 +107,7 @@ algorithm with other groups is a smart thing to do ;-)
 
 * 1st place: +15% on lab 3 grade
 * 2nd place: +10% on lab 3 grade
-* 3rd place: +5% on lab 3 grade
+* 3rd place: +5% on lab 3 grade -->
 
 ## What files can I change?
 
@@ -126,7 +126,7 @@ the discussion of your report:
 
 1. An application profile of the baseline / intermediate versions.
 2. An estimation on what performance can be gained after improving specific parts, 
-  based on the profiles.
+    based on the profiles.
 3. A short discussion on how you've improved specific parts.
 4. Go back to 1 and repeat until you've squeezed out as much throughput as possible.
 
