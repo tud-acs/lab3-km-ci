@@ -1,4 +1,4 @@
-# Advanced Computing Systems 2020-2021 Lab 3 - Accelerating a clustering algorithm
+# Advanced Computing Systems 2023-2024 Lab 3 - Accelerating a clustering algorithm
 
 This repository contains all files and explanations needed to perform
 the third lab of the EE4C07 - Advanced Computing Systems course at the
