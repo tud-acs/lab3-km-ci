@@ -18,17 +18,26 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+      run: |
+        module load cuda/10.2
+        module load devtoolset/8
+        cmake3 -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
     - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -j 8
+      run: |
+        module load cuda/10.2
+        module load devtoolset/8
+        cmake3 --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -j 8
 
     - name: Print GPU model
       run: nvidia-smi --query-gpu=gpu_name --format=csv
+
+    - name: Print nvidia-smi
+      run: nvidia-smi
       
     - name: Nsight-System profile
       working-directory: ${{github.workspace}}/build
-      run: nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
+      run: CUDA_VISIBLE_DEVICES=0 nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
       
     - uses: actions/upload-artifact@v3
       with:
