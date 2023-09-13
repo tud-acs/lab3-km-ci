@@ -37,7 +37,10 @@ jobs:
       
     - name: Nsight-System profile
       working-directory: ${{github.workspace}}/build
-      run: CUDA_VISIBLE_DEVICES=1 nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
+      run: |
+        module load cuda/10.2
+        module load devtoolset/8
+        CUDA_VISIBLE_DEVICES=1 nsys profile ./krazymeans -b -k 32 -s 1e-3 -t 25 -i benchmark.kmd -o labels.kml
       
     - uses: actions/upload-artifact@v3
       with:
