@@ -1,4 +1,4 @@
-# Advanced Computing Systems 2023-2024 Lab 3 - Accelerating a clustering algorithm
+# Advanced Computing Systems 2024-2025 Lab 3 - Accelerating a clustering algorithm
 
 This repository contains all files and explanations needed to perform
 the third lab of the EE4C07 - Advanced Computing Systems course at the
@@ -59,9 +59,9 @@ cannot change it to another variant of K-means. The distance scaling functionali
 MUST be included in your implementation. If you are unsure if some algorithmic
 change is allowed, ask the lab instructors - this is _your_ responsibility. 
 
-## Two types of GPU in GitHub Runners.
+## Branches and GPUs in GitHub Runners.
 
-This year, we provide two types of GPUs. You need to specify which GPU to use by pushing your code to branch `benchmark-gpu0` or `benchmark-gpu1`.
+This year, we provide two types of GPUs. You need to specify which GPU to use by pushing your code to branch `benchmark-gpu0` or `benchmark-gpu1`. Notice that benchmark branches will also perform Nsight System profiling on the benchmark server. If your code is not ***well-tested*** or might cause some troubles (e.g. runs longer than 10 minutes, may crash halfway), please push to branch `development-profile` to perform profiling on the development server first.
 
 ## What data set should I use for testing/debugging?
 
